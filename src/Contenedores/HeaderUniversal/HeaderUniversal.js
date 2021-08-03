@@ -16,7 +16,7 @@ const HeaderUniversal = () => {
     };
 
     return (
-        <Header links={links} dropdown={dropdown}/>
+        <Header links={links} dropdown={dropdown} sesion={URLS.PAGINA_SESION}/>
     );
 };
 

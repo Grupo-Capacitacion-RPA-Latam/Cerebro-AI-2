@@ -11,6 +11,7 @@ import Principal from "./Paginas/Principal/Principal";
 import RegisterLogin from "./Paginas/RegisterLogin/RegisterLogin";
 import Subscripciones from "./Paginas/Subscripciones/Subscripciones";
 import TextoPalabras from "./Paginas/TextoPalabras/TextoPalabras";
+import Noticias from "./Paginas/Noticias/Noticias";
 
 const App = () => {
   return (
@@ -38,6 +39,10 @@ const App = () => {
 
         <Route exact path={URLS.PAGINA_TEXTO_PALABRAS}>
           <TextoPalabras/>
+        </Route>
+
+        <Route exact path={URLS.PAGINA_NOTICIAS}>
+          <Noticias/>
         </Route>
 
         <Redirect to={URLS.PAGINA_PRINCIPAL}/>
