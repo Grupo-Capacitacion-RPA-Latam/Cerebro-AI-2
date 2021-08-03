@@ -3,7 +3,7 @@ import HeaderUniversal from "../../Contenedores/HeaderUniversal/HeaderUniversal"
 
 const Principal = () => {
     return (
-        <div>
+        <div className={clases_css.principal}>
             <HeaderUniversal/>
             {/*  Imagen  */}
             {/*  Content Applications  */}
