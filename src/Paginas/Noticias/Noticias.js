@@ -1,7 +1,7 @@
-import clases_css from './DetectorRostro.module.css';
+import clases_css from './Noticias.module.css';
 import HeaderUniversal from "../../Contenedores/HeaderUniversal/HeaderUniversal";
 
-const DetectorRostro = () => {
+const Noticias = () => {
     return (
         <div>
             <HeaderUniversal/>
@@ -9,4 +9,4 @@ const DetectorRostro = () => {
     );
 };
 
-export default DetectorRostro;
+export default Noticias;

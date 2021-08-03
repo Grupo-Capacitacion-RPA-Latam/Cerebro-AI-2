@@ -5,6 +5,7 @@ const URLS = {
     PAGINA_SESION: "/register-login",
     PAGINA_PELICULAS: "/movies",
     PAGINA_SUBSCRIPCION: "/subscriptions",
+    PAGINA_NOTICIAS: "/news",
 };
 
 export default URLS
