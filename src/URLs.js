@@ -6,6 +6,7 @@ const URLS = {
     PAGINA_PELICULAS: "/movies",
     PAGINA_SUBSCRIPCION: "/subscriptions",
     PAGINA_NOTICIAS: "/news",
+    PAGINA_TEXTO_PALABRAS_TRADUCIDAS: "/text-interpreter",
 };
 
 export default URLS
