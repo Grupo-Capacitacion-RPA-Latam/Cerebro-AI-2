@@ -1,4 +1,3 @@
-import clases_css from './Subscripciones.module.css';
 
 const Subscripciones = () => {
     return (
