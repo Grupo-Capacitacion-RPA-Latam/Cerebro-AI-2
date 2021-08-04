@@ -114,20 +114,19 @@ const DetectorRostro = () => {
 
                     if (faces.length === 0) {
                         alert("Puede ser que su pantalla es muy chica de acuerdo a la imagen seleccionada, por lo cual no puede detectar caras!")
+                    } else {
+                        setDetectedFaces({ 
+                            faces: faces
+                        });
+
+                        setFoundFaces({
+                            found: true
+                        });
+
+                        setFindFaces({
+                            find: false
+                        });
                     }
-
-                    setDetectedFaces({
-                        faces: faces
-                    });
-
-                    setFoundFaces({
-                        found: true
-                    });
-
-                    setFindFaces({
-                        find: false
-                    });
-
                 })
                 .catch(() => {
                     alert("Algo ocurrio! Vuelve a intentar con otro imagen url")
