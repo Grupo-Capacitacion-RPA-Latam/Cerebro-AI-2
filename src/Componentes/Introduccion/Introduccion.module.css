@@ -13,10 +13,6 @@
     width: 40%;
 }
 
-.introduccion img {
-    margin-left: auto;
-}
-
 .introduccion__enlace {
     align-self: flex-end;
     margin-right: 55px;
@@ -28,9 +24,26 @@
     color: black;
 }
 
-@media (orientation: portrait) {
+.introduccion__imagen_contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+.introduccion__imagen_contenedor__imagen_especial {
+    margin-left: 100%;
+}
+
+@media (max-width: 1300px) {
     .introduccion__titulo_descripcion_enlace {
         margin-bottom: 40px;
         width: 100%;
+    }
+
+    .introduccion__imagen_contenedor {
+        width: 100%;
+    }
+
+    .introduccion__imagen_contenedor__imagen_especial {
+        margin-left: 0%;
     }
 }
