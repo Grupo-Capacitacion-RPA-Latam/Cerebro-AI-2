@@ -1,5 +1,5 @@
 import TextField from '@material-ui/core/TextField';
-import './Input.css'
+import './Input.css';
 
 const Input = ({handleInputChange, onKeyPress, inputPlaceHolder}) => {
 
