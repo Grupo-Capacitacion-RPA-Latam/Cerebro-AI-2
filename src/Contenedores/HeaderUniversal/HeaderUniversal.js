@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 
 const HeaderUniversal = () => {
     const links = {
+        "Home": URLS.PAGINA_PRINCIPAL,
         "Peliculas": URLS.PAGINA_PELICULAS,
         "Noticias": URLS.PAGINA_NOTICIAS
     };

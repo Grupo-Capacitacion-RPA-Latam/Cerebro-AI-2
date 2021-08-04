@@ -6,10 +6,23 @@ import {
 } from "react-bootstrap";
 import Logo from "../../Componentes/Logo/Logo";
 import clases_css from './Header.module.css';
+import {useEffect} from 'react';
 
 const Header = ({links, dropdown, sesion}) => {
+    const cambiaHeaderColor = () => {
+        if (window.scrollY >= 40) {
+            document.getElementById("page-header").style.backgroundColor = "lightgrey"
+        } else {
+            document.getElementById("page-header").style.backgroundColor = "transparent"
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", cambiaHeaderColor)
+    }, []);
+
     return (
-        <Navbar expand="lg" fixed={"top"} className={`${clases_css.header} pa3`}>
+        <Navbar expand="lg" fixed={"top"} className={clases_css.header} id={"page-header"}>
             <Container className={`${clases_css.header__container}`}>
                 <Logo clases={"mr5"}/>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
