@@ -6,10 +6,12 @@ import {
     Button,
     MenuItem,
     InputLabel,
-    FormControl
+    FormControl,
+    ListSubheader
 } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
-import {useState} from 'react';
+import {useState, Fragment} from 'react';
+import opciones from "../../idiomas";
 
 const css = makeStyles(() => ({
     formControlTextSpeech: {
@@ -30,6 +32,19 @@ const css = makeStyles(() => ({
         width: 'fit-content',
         marginTop: '30px',
         marginBottom: '50px',
+    },
+
+    selectSubCategoria: {
+        top: 'auto'
+    },
+
+    textField: {
+        '& .MuiOutlinedInput-multiline': {
+            height: '150px'
+        },
+        '& .MuiInputBase-root': {
+            alignItems: 'flex-start'
+        }
     }
 }));
 
@@ -40,6 +55,11 @@ const TextoPalabras = () => {
 
     const [getSpeechConversion, setSpeechConversion] = useState({
         convert: false
+    });
+
+    const [seleccion, setSeleccion] = useState({
+        codeLang: "",
+        voz: ""
     });
 
     const onTextSpeechInputChange = e => {
@@ -60,18 +80,44 @@ const TextoPalabras = () => {
         }
     };
 
+    const onSelection = (e) => {
+        const [lang, voz] = e.target.value.split(" - ");
+        const codeLang = opciones[lang][0];
+
+        setSeleccion({
+            codeLang,
+            voz,
+        });
+    };
+
 
     const clase_css = css();
     return (
-        <div>
+        <Fragment>
             <HeaderUniversal/>
             <div className={clases_css.textoPalabras__inferior__form_contenedor}>
                 <FormControl required className={clase_css.formControlSelectIdioma}>
                     <InputLabel>Seleccione Idioma</InputLabel>
-                    <Select>
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
+                    <Select defaultValue="" onChange={onSelection}>
+                        {
+                            Object.entries(opciones).map(entry => {
+                                const lang = entry[0];
+                                const voces = entry[1][1];
+                                return (
+                                    [
+                                        <ListSubheader className={clase_css.selectSubCategoria}>
+                                            <strong>{lang}</strong>
+                                        </ListSubheader>,
+                                        voces.map(voz => {
+                                            const strippedGender = voz.split(' ')[0];
+                                            return <MenuItem value={`${lang} - ${strippedGender}`}>
+                                                {voz}
+                                            </MenuItem>
+                                        }),
+                                    ]
+                                )
+                            })
+                        }
                     </Select>
                 </FormControl>
 
@@ -82,7 +128,8 @@ const TextoPalabras = () => {
                         multiline
                         onChange={onTextSpeechInputChange}
                         onKeyPress={onTextSpeechKeyPress}
-                        maxRows={20}
+                        maxRows={10}
+                        className={clase_css.textField}
                     />
                 </FormControl>
 
@@ -94,7 +141,7 @@ const TextoPalabras = () => {
 
                 {
                     getSpeechConversion.convert ?
-                        <video src={`http://api.voicerss.org/?key=e4ddc02d04fa4203ba1a492a9d55e62e&hl=es-es&f=48khz_16bit_stereo&src=${textSpeechInputField.value}`}
+                        <video src={`http://api.voicerss.org/?key=e4ddc02d04fa4203ba1a492a9d55e62e&hl=${seleccion.codeLang}&f=48khz_16bit_stereo&v=${seleccion.voz}&src=${textSpeechInputField.value}`}
                                autoPlay={true} onEnded={() => {
                             setSpeechConversion({
                                 convert: false
@@ -103,7 +150,7 @@ const TextoPalabras = () => {
                         null
                 }
             </div>
-        </div>
+        </Fragment>
     );
 };
 
