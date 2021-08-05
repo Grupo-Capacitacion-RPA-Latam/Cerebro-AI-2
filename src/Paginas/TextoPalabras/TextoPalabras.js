@@ -69,9 +69,15 @@ const TextoPalabras = () => {
     };
 
     const convertTextSpeech = () => {
-        setSpeechConversion({
-            convert: true
-        });
+        String.prototype.isEmpty = function() {
+            return (this.length === 0 || !this.trim());
+        };
+
+        if (!(seleccion.codeLang.isEmpty()) && !(textSpeechInputField.value.isEmpty())) {
+            setSpeechConversion({
+                convert: true
+            });
+        }
     };
 
     const onTextSpeechKeyPress = e => {
