@@ -1,0 +1,29 @@
+.noticias__inferior {
+    margin-top: 200px;
+    padding: 40px;
+}
+
+.noticias__principal__relevante {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+@media (orientation: portrait) {
+    .noticias__inferior {
+        margin-top: 350px;
+    }
+}
+
+@media (max-width: 400px) {
+    .noticias__relevantes {
+        flex-direction: row;
+        overflow: auto;
+    }
+
+    .noticias__principal__relevante {
+        flex-wrap: wrap;
+    }
+}
