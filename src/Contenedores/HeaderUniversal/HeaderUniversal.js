@@ -1,7 +1,13 @@
 import URLS from "../../URLs";
 import Header from "../Header/Header";
 
-const HeaderUniversal = () => {
+const HeaderUniversal = (css="") => {
+    if (typeof(css) === "undefined") {
+        css = {
+            css: ""
+        }
+    }
+
     const links = {
         "Home": URLS.PAGINA_PRINCIPAL,
         "Peliculas": URLS.PAGINA_PELICULAS,
@@ -18,7 +24,7 @@ const HeaderUniversal = () => {
     };
 
     return (
-        <Header links={links} dropdown={dropdown} sesion={URLS.PAGINA_SESION}/>
+        <Header css={css} links={links} dropdown={dropdown} sesion={URLS.PAGINA_SESION}/>
     );
 };
 

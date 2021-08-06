@@ -1,0 +1,17 @@
+.peliculas {
+    background-color: #111;
+}
+
+.peliculas__inferior {
+    padding-top: 200px;
+}
+
+.peliculas__header {
+    background-color: #777777;
+}
+
+@media (orientation: portrait) {
+    .peliculas__inferior {
+        padding-top: 350px;
+    }
+}

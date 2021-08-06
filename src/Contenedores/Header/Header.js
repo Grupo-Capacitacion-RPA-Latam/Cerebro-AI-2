@@ -8,10 +8,10 @@ import Logo from "../../Componentes/Logo/Logo";
 import clases_css from './Header.module.css';
 import {useEffect} from 'react';
 
-const Header = ({links, dropdown, sesion}) => {
+const Header = ({links, dropdown, sesion, css}) => {
     const cambiaHeaderColor = () => {
         if (window.scrollY >= 40) {
-            document.getElementById("page-header").style.backgroundColor = "lightgrey"
+            document.getElementById("page-header").style.backgroundColor = "#626262"
         } else {
             document.getElementById("page-header").style.backgroundColor = "transparent"
         }
@@ -22,7 +22,7 @@ const Header = ({links, dropdown, sesion}) => {
     }, []);
 
     return (
-        <Navbar expand="lg" fixed={"top"} className={clases_css.header} id={"page-header"}>
+        <Navbar expand="lg" fixed={"top"} className={`${clases_css.header} ${css.css}`} id={"page-header"}>
             <Container className={`${clases_css.header__container}`}>
                 <Logo clases={"mr5"}/>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
