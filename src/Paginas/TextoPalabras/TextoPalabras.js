@@ -69,11 +69,13 @@ const TextoPalabras = () => {
     };
 
     const convertTextSpeech = () => {
-        String.prototype.isEmpty = function() {
-            return (this.length === 0 || !this.trim());
-        };
+        
+  
+        const isEmpty = (str) => {
+            return (str.length === 0 || !str.trim());
+        }
 
-        if (!(seleccion.codeLang.isEmpty()) && !(textSpeechInputField.value.isEmpty())) {
+        if (!(isEmpty(seleccion.codeLang)) && !(isEmpty( textSpeechInputField.value ))) {
             setSpeechConversion({
                 convert: true
             });
