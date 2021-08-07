@@ -24,7 +24,7 @@ const HeaderUniversal = (css="") => {
     };
 
     return (
-        <Header css={css} links={links} dropdown={dropdown} sesion={URLS.PAGINA_SESION}/>
+        <Header css={css} links={links} dropdown={dropdown} sesion={URLS.PAGINA_SESION} register={URLS.PAGINA_REGISTRAR}/>
     );
 };
 
