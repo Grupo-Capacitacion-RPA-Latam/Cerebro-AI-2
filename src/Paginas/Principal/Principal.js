@@ -31,12 +31,6 @@ const Principal = () => {
             enlaceRedireccion: URLS.PAGINA_TEXTO_PALABRAS,
             imagenUrl: imagenes.textSpeech
         },
-        {
-            descripcion: "Convierta cualquier oracion a palabras traducidas a su idioma preferida dichas por un robot.",
-            titulo: "Text Interpreter",
-            enlaceRedireccion: URLS.PAGINA_TEXTO_PALABRAS_TRADUCIDAS,
-            imagenUrl: imagenes.interpreter,
-        }
     ];
 
 
