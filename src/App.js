@@ -28,10 +28,6 @@ const App = () => {
           <Peliculas/>
         </Route>
 
-        <Route exact path={URLS.PAGINA_SESION}>
-          <RegisterLogin/>
-        </Route>
-
         <Route exact path={URLS.PAGINA_SUBSCRIPCION}>
           <Subscripciones/>
         </Route>
