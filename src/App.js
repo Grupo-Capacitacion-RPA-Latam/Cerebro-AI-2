@@ -13,14 +13,14 @@ import Subscripciones from "./Paginas/Subscripciones/Subscripciones";
 import TextoPalabras from "./Paginas/TextoPalabras/TextoPalabras";
 import Noticias from "./Paginas/Noticias/Noticias";
 
+
 const App = () => {
   return (
     <Router>
       <Switch>
         <Route exact path={URLS.PAGINA_PRINCIPAL}>
-          <Principal/>
+            <Principal/>
         </Route>
-
         <Route exact path={URLS.PAGINA_DETECTOR_DE_ROSTROS}>
           <DetectorRostro/>
         </Route>
