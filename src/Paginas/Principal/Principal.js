@@ -14,12 +14,6 @@ const Principal = () => {
             imagenUrl: imagenes.detectorRostro
         },
         {
-            descripcion: "Acceda a las noticias de última hora de todo el mundo.",
-            titulo: "Noticias",
-            enlaceRedireccion: URLS.PAGINA_NOTICIAS,
-            imagenUrl: imagenes.noticias
-        },
-        {
             descripcion: "Acceda informacion de peliculas y series, vea el trailer, ultimamente eligiendo la pelicula o serie que desea disfrutar.",
             titulo: "Peliculas",
             enlaceRedireccion: URLS.PAGINA_PELICULAS,
