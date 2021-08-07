@@ -11,6 +11,9 @@ import Principal from "./Paginas/Principal/Principal";
 import Subscripciones from "./Paginas/Subscripciones/Subscripciones";
 import TextoPalabras from "./Paginas/TextoPalabras/TextoPalabras";
 import Noticias from "./Paginas/Noticias/Noticias";
+import Card from "./Paginas/Subscripciones/Card";
+import Cards from "./Paginas/Subscripciones/Cards";
+import "./Paginas/Subscripciones/App.css";
 
 
 const App = () => {
@@ -29,7 +32,7 @@ const App = () => {
         </Route>
 
         <Route exact path={URLS.PAGINA_SUBSCRIPCION}>
-          <Subscripciones/>
+           <Card/>
         </Route>
 
         <Route exact path={URLS.PAGINA_TEXTO_PALABRAS}>

@@ -1,0 +1,19 @@
+.peliculas {
+
+    background: rgb(161,160,169);
+    background: linear-gradient(90deg, rgba(161,160,169,1) 15%, rgba(118,125,127,1) 36%, rgba(84,91,93,0.6225840678068102) 54%, rgba(124,131,132,1) 100%);
+  }
+
+.peliculas__inferior {
+    padding-top: 200px;
+}
+
+.peliculas__header {
+    background-color: #777777;
+}
+
+@media (orientation: portrait) {
+    .peliculas__inferior {
+        padding-top: 350px;
+    }
+}

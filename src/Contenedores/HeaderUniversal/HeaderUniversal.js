@@ -11,6 +11,7 @@ const HeaderUniversal = (css="") => {
     const links = {
         "Home": URLS.PAGINA_PRINCIPAL,
         "Peliculas": URLS.PAGINA_PELICULAS,
+        "Subscripciones": URLS.PAGINA_SUBSCRIPCION,
     };
 
     const dropdown = {
