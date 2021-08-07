@@ -8,7 +8,6 @@ import URLS from "./URLs";
 import DetectorRostro from "./Paginas/DetectorRostro/DetectorRostro";
 import Peliculas from "./Paginas/Peliculas/Peliculas";
 import Principal from "./Paginas/Principal/Principal";
-import RegisterLogin from "./Paginas/RegisterLogin/RegisterLogin";
 import Subscripciones from "./Paginas/Subscripciones/Subscripciones";
 import TextoPalabras from "./Paginas/TextoPalabras/TextoPalabras";
 import Noticias from "./Paginas/Noticias/Noticias";
