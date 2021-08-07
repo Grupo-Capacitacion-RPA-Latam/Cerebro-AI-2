@@ -5,9 +5,9 @@ const NoticiasRelevantes = ({noticias}) => {
         <div className={clases_css.noticias__relevantes}>
             {/*  Contenedor Relevantes -> Imagen, Descripcion, Enlace  */}
             {
-                noticias.map(noticia => {
+                noticias.map((noticia, index) => {
                     const [imagen, descripcion, enlace, titulo] = noticia;
-                    return <div className={clases_css.noticias__relevantes_contenedor}>
+                    return <div className={clases_css.noticias__relevantes_contenedor} key={index}>
                         <img src={imagen}
                              alt=""
                              className={clases_css.noticias__relevantes__imagen}/>

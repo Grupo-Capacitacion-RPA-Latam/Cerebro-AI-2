@@ -12,7 +12,6 @@ import RegisterLogin from "./Paginas/RegisterLogin/RegisterLogin";
 import Subscripciones from "./Paginas/Subscripciones/Subscripciones";
 import TextoPalabras from "./Paginas/TextoPalabras/TextoPalabras";
 import Noticias from "./Paginas/Noticias/Noticias";
-import TextoPalabrasTraducidas from "./Paginas/TextoPalabrasTraducidas/TextoPalabrasTraducidas";
 
 const App = () => {
   return (
@@ -44,10 +43,6 @@ const App = () => {
 
         <Route exact path={URLS.PAGINA_NOTICIAS}>
           <Noticias/>
-        </Route>
-
-        <Route exact path={URLS.PAGINA_TEXTO_PALABRAS_TRADUCIDAS}>
-          <TextoPalabrasTraducidas/>
         </Route>
 
         <Redirect to={URLS.PAGINA_PRINCIPAL}/>

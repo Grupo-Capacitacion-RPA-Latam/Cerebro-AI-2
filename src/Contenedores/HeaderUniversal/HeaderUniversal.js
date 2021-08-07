@@ -19,7 +19,6 @@ const HeaderUniversal = (css="") => {
         links: {
             "Face Detection": URLS.PAGINA_DETECTOR_DE_ROSTROS,
             "Text to Speech": URLS.PAGINA_TEXTO_PALABRAS,
-            "Text Interpreter": URLS.PAGINA_TEXTO_PALABRAS_TRADUCIDAS,
         }
     };
 

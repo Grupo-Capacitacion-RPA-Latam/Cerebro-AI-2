@@ -32,3 +32,16 @@
 .noticias__relevantes__titulo {
     font-size: smaller;
 }
+
+@media (max-width: 540px) {
+    .noticias__relevantes {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        overflow-y: initial;
+    }
+
+    .noticias__relevantes_contenedor {
+        width: 50%;
+    }
+}
