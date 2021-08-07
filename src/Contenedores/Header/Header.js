@@ -8,7 +8,7 @@ import Logo from "../../Componentes/Logo/Logo";
 import clases_css from './Header.module.css';
 import {useEffect} from 'react';
 
-const Header = ({links, dropdown, sesion, css, register}) => {
+const Header = ({links, dropdown, sesion, css}) => {
     const cambiaHeaderColor = () => {
         if (window.scrollY >= 40) {
             document.getElementById("page-header").style.backgroundColor = "#626262"
@@ -46,7 +46,7 @@ const Header = ({links, dropdown, sesion, css, register}) => {
                     </Nav>
                     <Nav >
                         <Nav.Link href={sesion}>Iniciar Sesion</Nav.Link>
-                        <Nav.Link href={register}>Crear Cuenta</Nav.Link>
+                        <Nav.Link href={sesion}>Crear Cuenta</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

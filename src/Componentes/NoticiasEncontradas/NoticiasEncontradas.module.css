@@ -1,0 +1,35 @@
+.noticias_encontradas {
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+}
+
+.noticias_encontradas__noticias_contenedor {
+    width: 20%;
+    margin: 20px;
+}
+
+.noticias_encontradas__enlace {
+    align-self: flex-end;
+    margin-right: 20%;
+    text-decoration-line: none;
+    color: #787878;
+}
+
+.noticias_encontradas__enlace:hover {
+    color: #303030;
+}
+
+.noticias_encontradas__descripcion {
+    font-size: smaller;
+}
+
+.noticias__encontradas__titulo {
+    font-size: smaller;
+}
+
+@media (max-width: 540px) {
+    .noticias_encontradas {
+        margin-top: 1400px;
+    }
+}

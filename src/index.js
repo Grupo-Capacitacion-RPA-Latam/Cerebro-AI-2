@@ -4,8 +4,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'tachyons';
+import {Provider} from "react-redux";
+import store from "./redux/main";
 
-ReactDOM.render(<App />,
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
   document.getElementById('root')
 );
 

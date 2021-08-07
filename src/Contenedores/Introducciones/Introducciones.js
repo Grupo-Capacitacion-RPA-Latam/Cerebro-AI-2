@@ -1,4 +1,5 @@
 import Introduccion from "../../Componentes/Introduccion/Introduccion";
+import {Fragment} from 'react';
 
 const Introducciones = ({introducciones}) => {
     // [
@@ -6,7 +7,7 @@ const Introducciones = ({introducciones}) => {
     // ]
 
     return (
-        <div>
+        <Fragment>
             {
                 introducciones.map(({descripcion, titulo, enlaceRedireccion, imagenUrl}, index) =>
                     <Introduccion descripcion={descripcion}
@@ -16,7 +17,7 @@ const Introducciones = ({introducciones}) => {
                                   imagen={imagenUrl}/>
                 )
             }
-        </div>
+        </Fragment>
     );
 };
 
