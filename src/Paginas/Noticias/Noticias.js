@@ -24,46 +24,48 @@ const Noticias = () => {
     useEffect(() => {
         if (news.news.length === 0) {
             fetchNews().then(([otherNews, topNews]) => {
-                dispatch({
-                    type: types.newsPage.SET_NEWS,
-                    payload: {
-                        news: [
-                            otherNews,
-                            topNews
-                        ],
-                        relevantNews: [
-                            [
-                                topNews[1].urlToImage,
-                                topNews[1].description,
-                                topNews[1].url,
-                                topNews[1].title,
+                if ((typeof(topNews) !== 'undefined') && (typeof(otherNews) !== 'undefined')) {
+                    dispatch({
+                        type: types.newsPage.SET_NEWS,
+                        payload: {
+                            news: [
+                                otherNews,
+                                topNews
                             ],
-                            [
-                                topNews[2].urlToImage,
-                                topNews[2].description,
-                                topNews[2].url,
-                                topNews[2].title,
+                            relevantNews: [
+                                [
+                                    topNews[1].urlToImage,
+                                    topNews[1].description,
+                                    topNews[1].url,
+                                    topNews[1].title,
+                                ],
+                                [
+                                    topNews[2].urlToImage,
+                                    topNews[2].description,
+                                    topNews[2].url,
+                                    topNews[2].title,
+                                ],
+                                [
+                                    topNews[3].urlToImage,
+                                    topNews[3].description,
+                                    topNews[3].url,
+                                    topNews[3].title,
+                                ],
+                                [
+                                    topNews[4].urlToImage,
+                                    topNews[4].description,
+                                    topNews[4].url,
+                                    topNews[4].title,
+                                ],
                             ],
-                            [
-                                topNews[3].urlToImage,
-                                topNews[3].description,
-                                topNews[3].url,
-                                topNews[3].title,
-                            ],
-                            [
-                                topNews[4].urlToImage,
-                                topNews[4].description,
-                                topNews[4].url,
-                                topNews[4].title,
-                            ],
-                        ],
-                        showNews: true,
-                    }
-                });
+                            showNews: true,
+                        }
+                    });
+                }
             }).catch(() => alert("[-] No ha podido cargar la pagina por 'cors policy'."))
         }
         // eslint-disable-next-line
-    }, []);
+    }, [news]);
 
     return (
         <Fragment>
@@ -72,10 +74,10 @@ const Noticias = () => {
                 <div className={clases_css.noticias__principal__relevante}>
                     {
                         news.showNews ?
-                            <NoticiasPrincipal descripcion={news.news[1][0].description}
-                                               titulo={news.news[1][0].title}
-                                               imagen={news.news[1][0].urlToImage}
-                                               enlace={news.news[1][0].url}/> :
+                            <NoticiasPrincipal descripcion={Boolean(news.news[1][0].urlToImage) ? news.news[1][0].description : news.news[1][6].description}
+                                               titulo={Boolean(news.news[1][0].urlToImage) ? news.news[1][0].title : news.news[1][6].title}
+                                               imagen={Boolean(news.news[1][0].urlToImage) ? news.news[1][0].urlToImage : news.news[1][6].urlToImage}
+                                               enlace={Boolean(news.news[1][0].urlToImage) ? news.news[1][0].url : news.news[1][6].url}/> :
                             null
                     }
                     {

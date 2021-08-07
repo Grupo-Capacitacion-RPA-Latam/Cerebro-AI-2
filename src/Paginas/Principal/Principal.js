@@ -25,6 +25,12 @@ const Principal = () => {
             enlaceRedireccion: URLS.PAGINA_TEXTO_PALABRAS,
             imagenUrl: imagenes.textSpeech
         },
+        {
+            descripcion: "Acceda a las noticias de última hora de todo el mundo.",
+            titulo: "Noticias",
+            enlaceRedireccion: URLS.PAGINA_NOTICIAS,
+            imagenUrl: imagenes.noticias
+        },
     ];
 
 
