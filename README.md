@@ -1,3 +1,8 @@
+# Cerebro AI
+Cerebro AI es una web multi pagina desarrollado por Jerson Castro, Isaias Cedano y Renato Ugarte quien sigue en el desarrollo del login y registro. Esta pagina permite a nuestros clientes detectar rostros de cualquier imagen, convertir cualquier texto de la mayoria de las idiomas a palabras  dichas por el robot seleccionado, aparte de poder ver las mejores peliculas actualmente en el tiempo de visita. 
+
+Nota: La pagina de noticias solamente trabaja atraves del npm start (uso local) ya que se require un upgrade de protocolo de parte del cliente al servidor api newsapi.org. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
