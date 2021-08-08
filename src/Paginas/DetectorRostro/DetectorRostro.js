@@ -72,7 +72,7 @@ const DetectorRostro = () => {
             const faceFormData = new FormData();
             faceFormData.append("api_key", "M-vc3wXc1iAHDKyPURtUYA4ih7vq0Rbt");
             faceFormData.append("api_secret", "57EkRLUPeopzqHNFOk4_Z6ub_vxpySED");
-            faceFormData.append("image_url", convertedUrl.url);
+            faceFormData.append("image_url", convertedUrl);
             const formDataConfig = {
                 method: "POST",
                 body: faceFormData,
