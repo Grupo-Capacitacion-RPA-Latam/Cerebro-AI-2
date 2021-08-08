@@ -15,10 +15,9 @@ function Subscripciones  ({title, imageSource, url, precio, text1, text2, text3}
             <a href={url} className="btn btn-outline-secondary rounded-0" rel="noreferrer" target="_blank">
                 Comprar
             </a>
-
         </div>
     </div>
     );
-};
+}
 
 export default Subscripciones;

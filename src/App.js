@@ -10,7 +10,9 @@ import Peliculas from "./Paginas/Peliculas/Peliculas";
 import Principal from "./Paginas/Principal/Principal";
 import TextoPalabras from "./Paginas/TextoPalabras/TextoPalabras";
 import Noticias from "./Paginas/Noticias/Noticias";
-import Subscripciones from "./Paginas/Subscripciones/Subscripciones";
+import Card from "./Paginas/Subscripciones/Card";
+import "./Paginas/Subscripciones/App.css";
+
 
 const App = () => {
   return (
@@ -28,7 +30,7 @@ const App = () => {
         </Route>
 
         <Route exact path={URLS.PAGINA_SUBSCRIPCION}>
-          <Subscripciones/>
+           <Card/>
         </Route>
 
         <Route exact path={URLS.PAGINA_TEXTO_PALABRAS}>
