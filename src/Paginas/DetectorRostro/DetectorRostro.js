@@ -57,7 +57,7 @@ const DetectorRostro = () => {
     };
 
     const detectFaces = () => {
-        resizeImage(faceInputField.value, convertedImgWidth);
+        resizeImage(faceInputField, convertedImgWidth);
         setFindFaces(true)
     };
 
